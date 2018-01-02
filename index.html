@@ -10,14 +10,37 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="index.js"></script>
+        <style>
+            #the_p {
+                background-color:purple;
+                color:white;
+            }
+        </style>
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <div>this is a div with some text
-            <p>this is <strongm>more</strong>text</p>
+            <p id="the_p">this is <strong>more</strong> text</p>
         </div> 
-        
+        <button id="the_button">Button</button>
+        <script>
+                var the_button = document.getElementById('the_button');
+                var the_p = document.getElementById('the_p');
+                the_button.addEventListener('click',function(){
+                    change_color();
+                });
+    
+                var change_color = function (){
+                    if(the_p.style.color === 'black'){
+                        the_p.style.color = "white";
+                        the_p.style.backgroundColor = "purple";
+                    } else {
+                        the_p.style.color = "black";
+                        the_p.style.backgroundColor = "white";
+                    }
+                };
+            </script>
     </body>
 </html>
