@@ -1,3 +1,4 @@
+/*
 var init = function () {
     //initialize players
     console.log("Game Started. Players: " + player1.name + " and " + player2.name + " initialized.")
@@ -23,3 +24,11 @@ Player.prototype.giveCredits = function (name, amount) {
 
 var player1 = new Player("Sean", 1000000);
 var player2 = new Player("Vicky", 1000000);
+*/
+
+import React from "react";
+import ReactDOM from "react-dom";
+
+import App from "./App.js";
+
+ReactDOM.render(<App />, document.getElementById("root"));
