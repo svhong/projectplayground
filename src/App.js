@@ -15,10 +15,29 @@ import React from "react";
 // }
 
 class App extends React.Component {
-    render () {
-        return <div>
-            <h1>some stuff here</h1>
-        </div>
+    constructor() {
+        super()
+        this.state = {
+            counter: 0
+        }
+        this.handleClick = this.handleClick.bind(this);
+    }
+
+    handleClick = () => {
+        this.setState((prevState) => {
+            return {
+                counter: prevState.counter + 1
+            }
+        })
+    }
+
+    render() {
+        return (
+            <div>
+                <h1>{this.state.counter}</h1>
+                <button onClick={this.handleClick}>+1 buddeh</button>
+            </div>
+        )
     }
 }
 
