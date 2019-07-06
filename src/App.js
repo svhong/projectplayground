@@ -37,7 +37,7 @@ class App extends React.Component {
     render() {
         return (
             <div>
-                <h2>Something is here</h2>
+                <h2>{!this.state.isLoggedIn ? "You are logged in" : "You have logged out"}</h2>
                 <button onClick={this.handleClick}>Log {this.state.isLoggedIn ? "in" : "out"}</button>
             </div>
         )
