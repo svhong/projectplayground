@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 // import ProductItem from "./components/ProductItem";
 
 // import productsData from "./components/productsData";
@@ -14,31 +14,57 @@ import React from "react";
 //     )
 // }
 
-class App extends React.Component {
+class App extends Component {
 
+    // constructor() {
+    //     super();
+    //     this.state = {
+    //         isLoggedIn: true
+    //     }
+    //     this.handleClick = this.handleClick.bind(this);
+    // }
+
+    // handleClick = () => {
+    //     //when clicked, check if user is logged in
+    //     console.log("log in status: " + this.state.isLoggedIn);
+    //     this.setState((prevState) => {
+    //         return {
+    //             isLoggedIn: !prevState.isLoggedIn
+    //         }
+    //     })
+    // }
+
+    // render() {
+    //     return (
+    //         <div>
+    //             <h2>{!this.state.isLoggedIn ? "You are logged in" : "You have logged out"}</h2>
+    //             <button onClick={this.handleClick}>Log {this.state.isLoggedIn ? "in" : "out"}</button>
+    //         </div>
+    //     )
+    // }
     constructor() {
         super();
         this.state = {
-            isLoggedIn: true
+            loading: false,
+            character: {}
         }
-        this.handleClick = this.handleClick.bind(this);
     }
 
-    handleClick = () => {
-        //when clicked, check if user is logged in
-        console.log("log in status: " + this.state.isLoggedIn);
-        this.setState((prevState) => {
-            return {
-                isLoggedIn: !prevState.isLoggedIn
-            }
-        })
+    componentDidMount() {
+        this.setState({ loading: true })
+        fetch("https://swapi.co/api/people/1")
+            .then(response => response.json())
+            .then(data => this.setState({
+                loading: false,
+                character: data
+            }))
     }
 
     render() {
+        const text = this.state.loading ? "loading..." : this.state.character.name
         return (
             <div>
-                <h2>{!this.state.isLoggedIn ? "You are logged in" : "You have logged out"}</h2>
-                <button onClick={this.handleClick}>Log {this.state.isLoggedIn ? "in" : "out"}</button>
+                {text}
             </div>
         )
     }
