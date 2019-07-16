@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import FormContainer from "./components/FormContainer";
 // import ProductItem from "./components/ProductItem";
 
 // import productsData from "./components/productsData";
@@ -42,32 +43,40 @@ class App extends Component {
     //         </div>
     //     )
     // }
-    constructor() {
-        super();
-        this.state = {
-            loading: false,
-            character: {}
-        }
-    }
+    /***************************SWAPI************************ */
+    // constructor() {
+    //     super();
+    //     this.state = {
+    //         loading: false,
+    //         character: {}
+    //     }
+    // }
 
-    componentDidMount() {
-        this.setState({ loading: true })
-        fetch("https://swapi.co/api/people/1")
-            .then(response => response.json())
-            .then(data => this.setState({
-                loading: false,
-                character: data
-            }))
-    }
+    // componentDidMount() {
+    //     this.setState({ loading: true })
+    //     fetch("https://swapi.co/api/people/1")
+    //         .then(response => response.json())
+    //         .then(data => this.setState({
+    //             loading: false,
+    //             character: data
+    //         }))
+    // }
 
-    render() {
-        const text = this.state.loading ? "loading..." : this.state.character.name
-        return (
-            <div>
-                {text}
-            </div>
-        )
-    }
+    // render() {
+    //     const text = this.state.loading ? "loading..." : this.state.character.name
+    //     return (
+    //         <div>
+    //             {text}
+    //         </div>
+    //     )
+    // }
+
+    // Render Form for airline customer form
+    // render() {
+    //     return (
+    //         <FormContainer />
+    //     )
+    // }
 }
 
 export default App;
