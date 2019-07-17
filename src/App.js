@@ -1,8 +1,12 @@
 import React, { Component } from "react";
-import FormContainer from "./components/FormContainer";
-// import ProductItem from "./components/ProductItem";
 
+import MemeHeader from "./components/MemeHeader";
+import MemeGenerator from "./components/MemeGenerator";
+// import FormContainer from "./components/FormContainer";
+// import ProductItem from "./components/ProductItem";
 // import productsData from "./components/productsData";
+
+import "./style.css";
 
 // const App = () => {
 
@@ -16,7 +20,15 @@ import FormContainer from "./components/FormContainer";
 // }
 
 class App extends Component {
+    render() {
+        return (
+            <div>
+                <MemeHeader />
+                <MemeGenerator />
+            </div>
 
+        )
+    }
     // constructor() {
     //     super();
     //     this.state = {
