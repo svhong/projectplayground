@@ -1,0 +1,57 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    height: 10rem;
+    background-color:lavender;
+    display: flex;
+    align-items: center;
+}
+
+header > img {
+    height:80%;
+    margin-left:10%;
+}
+
+header > p {
+    font-size: 5rem;
+    font-family: "Impact";
+    margin-left: 5%;
+}
+
+.memeArea {
+    display: flex;
+    justify-content: center;
+    position:relative;
+}
+
+.memeArea > img {
+    height:50vh
+}
+
+.memeArea > p {
+    margin:0;
+    font-family: Impact;
+    color: white;
+    font-size: 3.5rem;
+    text-shadow:
+        2px 2px 0 #000,
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000,
+        0 2px 0 #000,
+        2px 0 0 #000,
+        0 -2px 0 #000,
+        -2px 0 0 #000,
+        2px 2px 5px #000;
+    position: absolute;
+}
+
+.bottomText {
+    bottom:0;
+}
