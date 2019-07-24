@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
-// import MemeHeader from "./components/MemeHeader";
-// import MemeGenerator from "./components/MemeGenerator";
+import MemeHeader from "./components/MemeHeader";
+import MemeGenerator from "./components/MemeGenerator";
 // import FormContainer from "./components/FormContainer";
 // import ProductItem from "./components/ProductItem";
 // import productsData from "./components/productsData";
@@ -20,24 +20,17 @@ import "./style.css";
 // }
 
 class App extends Component {
-    render() {
-        return (
-            <div>something here</div>
-        )
-    }
-
-
 
     /* MEME Gen */
-    // render() {
-    //     return (
-    //         <div>
-    //             <MemeHeader />
-    //             <MemeGenerator />
-    //         </div>
+    render() {
+        return (
+            <div>
+                <MemeHeader />
+                <MemeGenerator />
+            </div>
 
-    //     )
-    // }
+        )
+    }
     /*************/
 
     // constructor() {
