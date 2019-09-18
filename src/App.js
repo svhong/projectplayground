@@ -20,9 +20,6 @@ import "./style.css";
 // }
 
 class App extends Component {
-
-    
-
     /* MEME Gen***********************************/
     // render() {
     //     return (
@@ -88,7 +85,7 @@ class App extends Component {
     //         </div>
     //     )
     // }
-/*********************airline form*********************** */
+    /*********************airline form*********************** */
     // Render Form for airline customer form
     // render() {
     //     return (
