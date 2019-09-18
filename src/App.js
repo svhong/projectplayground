@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
-import MemeHeader from "./components/MemeHeader";
-import MemeGenerator from "./components/MemeGenerator";
+// import MemeHeader from "./components/MemeHeader";
+// import MemeGenerator from "./components/MemeGenerator";
 // import FormContainer from "./components/FormContainer";
 // import ProductItem from "./components/ProductItem";
 // import productsData from "./components/productsData";
@@ -20,18 +20,17 @@ import "./style.css";
 // }
 
 class App extends Component {
+    /* MEME Gen***********************************/
+    // render() {
+    //     return (
+    //         <div>
+    //             <MemeHeader />
+    //             <MemeGenerator />
+    //         </div>
 
-    /* MEME Gen */
-    render() {
-        return (
-            <div>
-                <MemeHeader />
-                <MemeGenerator />
-            </div>
-
-        )
-    }
-    /*************/
+    //     )
+    // }
+    /************************Log In Status********************/
 
     // constructor() {
     //     super();
@@ -86,7 +85,7 @@ class App extends Component {
     //         </div>
     //     )
     // }
-
+    /*********************airline form*********************** */
     // Render Form for airline customer form
     // render() {
     //     return (
